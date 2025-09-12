@@ -1,0 +1,108 @@
+
+<% layout('layouts/boilerplates')%>
+
+
+    <!--new code-->
+    <!DOCTYPE html>
+    <style>
+        body {
+            background: url('/images/new image.webp');
+            /* background-repeat: no-repeat; */
+            /* background-position: top; */
+            background-size: cover;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255,0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            /* margin-top: 50px; */
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .form-control {
+            border-radius: 8px;
+            padding: 10px 15px;
+        }
+        .input-group-text {
+            border-radius: 8px 0 0 8px;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+            padding: 0.7rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+            border-color: #28a745;
+        }
+        textarea.form-control {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h1 class="text-center">Add New Campground</h1>
+                    <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label" for="title">Title</label>
+                            <input class="form-control" type="text" id="title" name="campground[title]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" id="location" name="campground[location]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Upload Images</label>
+                            <input class="form-control" type="file" id="image" name="image" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="price">Campground Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="price-label">$</span>
+                                <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]" required>
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="description">Description</label>
+                            <textarea class="form-control" type="text" id="description" name="campground[description]" rows="5" required></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button class="btn btn-success">Add Campground</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

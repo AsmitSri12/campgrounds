@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplates')%>
+
+<div class="container mt-4">
+    <div class="row" style="display: flex; justify-content: space-between;">
+        <!-- User Info Section -->
+        <div class="col-md-4" style="height: 600px; border-radius: 5px; background-color: whitesmoke; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            <div class="card" style="border: none; background-color: whitesmoke;">
+                <div class="card-body text-center">
+                    <img src="/images/user image.webp" alt="userProfile" class="rounded-pill mb-5">
+                    <h4 class="card-title"><%= userProfile.username %></h4>
+                    <p class="card-text" style="font-size: 14px; font-weight: bold; font-size: 20px;">Email: <%= userProfile.email %></p>
+                    <p class="card-text" style="font-size: 14px;">Number of Campgrounds Published : <%= allCampgrounds.length %></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blogs List Section -->
+        <div class="col-md-7">
+            <h1 class="ms-2 mb-4">Your Campgrounds</h1>
+            <hr>
+            <% if(allCampgrounds.length > 0) { %>
+                <ul class="list-group list-group-flush">
+                    <% allCampgrounds.forEach(function(camp) { %>
+                        <a href='/campgrounds/<%=camp._id%>' style="text-decoration: none;">
+                        <li class="list-group-item" style="border: none;">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h6><%= camp.title %></h6>
+                                    <p class="text-muted" style="font-size: 12px;">
+                                        <i class="bi bi-calendar"></i> <%= camp.createdAt %>
+                                    </p>
+                                    <p class="text-truncate" style="font-size: 14px;"><%= camp.description %></p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="<%= camp.images[0].url %>" class="img-fluid rounded" alt="Blog Image" style="max-height: 80px;">
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                        <hr>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <p class="text-muted">You have not created any campground yet.</p>
+            <% } %>
+        </div>
+    </div>
+</div>

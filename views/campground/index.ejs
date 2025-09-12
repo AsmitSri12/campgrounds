@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplates')%>
+         <h1 class="mb-4">All Latest Campground</h1>
+    <div class="row " style="display: flex; justify-content: space-between;">
+        <div class="col-md-8">
+            <% campgrounds.forEach(function(campground) { %>
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    <%= campground.author.username %> @<%= campground.author.email %>
+                                </p>
+                                <h5 class="card-title">
+                                    <%= campground.title %>
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    <%= campground.description %>
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/<%=campground._id%>">View <%=campground.title%>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="<%= campground.images[0].url %>" class="img-fluid rounded-end" alt="Blog Image"
+                                style="max-height: 100px;">
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+
+
+        <div class="col-md-4">
+            <h5 class="mt-4 ms-3">Price from Low to high</h5>
+            <ul class="list-group list-group-flush">
+                <% lowPriceCamp.forEach(function(camp, index) { %>
+                    <li class="list-group-item" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 32px; color: #ddd; margin-right: 10px;">
+                                <%= index + 1 %>
+                            </span>
+                            <div>
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    <%= camp.author.username %> @<%= camp.author.email %>
+                                            <%= camp.createdAt %>
+                                </p>
+                                <p style="margin: 0;"><strong>
+                                        <%= camp.title %>
+                                    </strong></p>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                    <% }) %>
+            </ul>
+        </div>
+    </div>
+    </div> 
