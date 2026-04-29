@@ -20,7 +20,8 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/review');
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/Campground-data')
+const dbUrl = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/Campground-data';
+mongoose.connect(dbUrl)
     .then(() => {
         console.log("Connected to Database");
     })
@@ -39,8 +40,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+const secret = process.env.SECRET || 'campgroundSecret';
 const sessionConfig = {
-    secret: 'campgroundSecret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -94,8 +96,9 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err });
 })
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000');
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 })
 
 
