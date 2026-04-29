@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiCamp</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column vh-100">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">HiCamp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                <a class="nav-link" href="/campgrounds/new">New Campground</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    
+            </div>
+        </div>
+    </div>
+</nav>
+        <main class="container mt-5">
+            
+
+
+ 
+<!-- 
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div> -->
+                
+         <h1 class="mb-4">All Latest Campground</h1>
+    <div class="row " style="display: flex; justify-content: space-between;">
+        <div class="col-md-8">
+            
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    vaibhav123 @vaibhav2@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Tropical Paradise Camping, Coorg
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Nestled amidst the lush greenery of Coorg, this campground offers a tranquil escape into nature. Surrounded by coffee plantations, waterfalls, and pristine wilderness, campers can enjoy activities like trekking, bird watching, and bonfires under the starry sky. The campsite provides spacious tents, clean restrooms, and local cuisine. Ideal for families, couples, and solo travelers looking for a serene outdoor experience, this location guarantees a peaceful retreat away from the city’s hustle and bustle.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d4894a21d9d1c8728a91">View Tropical Paradise Camping, Coorg
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253384/Yelpcamp/p07mlzgxzh1vznr09lwh.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    vaibhav123 @vaibhav2@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Beachfront Camping at Palolem Beach
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Located on the serene Palolem Beach in Goa, this beachfront campsite offers breathtaking views of the Arabian Sea. Campers can enjoy activities like kayaking, beach volleyball, and dolphin watching. The campsite is equipped with comfortable tents, beachside seating, and barbecue facilities. Perfect for beach lovers and adventure enthusiasts, it provides a relaxing atmosphere with vibrant sunsets and the gentle sound of waves. Explore local markets and nightlife in nearby areas for a complete Goa experience.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d4bd4a21d9d1c8728a9a">View Beachfront Camping at Palolem Beach
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253436/Yelpcamp/b0nnv07ofjjtmxqfye1q.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    vaibhav123 @vaibhav2@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Forest Trails Camping, Rishikesh
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Located in the foothills of the Himalayas, this campsite in Rishikesh offers a rejuvenating experience with river rafting, jungle trekking, and meditation retreats. Set amidst tall pine trees and beside the Ganga River, it’s perfect for nature lovers and spiritual seekers alike. The campsite provides comfortable tents, healthy organic meals, and campfire activities. The peaceful setting combined with adventurous activities makes it an ideal spot for thrill-seekers and those wanting a deeper connection with nature.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d4f74a21d9d1c8728aa3">View Forest Trails Camping, Rishikesh
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253493/Yelpcamp/rrkg2otvhtopa8cnff61.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    asmit_1502 @asmit12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Desert Dunes Camping, Jaisalmer
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Experience the charm of Rajasthan with desert camping near the golden sands of Jaisalmer. This campsite offers camel safaris, traditional Rajasthani folk performances, and a night under the stars. The tents are luxurious with attached bathrooms, and local cuisine is served to give visitors a true taste of the region. Ideal for families, groups, and solo travelers seeking an authentic desert experience, this campsite combines comfort with adventure.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d6354a21d9d1c8728ab9">View Desert Dunes Camping, Jaisalmer
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253811/Yelpcamp/ozrpnbmdqc34tmcfdolp.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    asmit_1502 @asmit12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Mountain Breeze Camping, Manali
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    This campsite in the heart of Himachal Pradesh is surrounded by snow-capped mountains and lush valleys, offering stunning views of the Himalayas. Visitors can partake in activities such as paragliding, trekking, and exploring nearby villages. The tents are well-equipped with warm bedding, and local delicacies are prepared on-site. Perfect for adventurers and peace-seekers alike, it offers a blend of serenity and thrill.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d6634a21d9d1c8728ac2">View Mountain Breeze Camping, Manali
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253857/Yelpcamp/vgiiea6wkwmnehdk30vi.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    asmit_1502 @asmit12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Wildlife Adventure Camping, Jim Corbett National Park
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Located on the outskirts of Jim Corbett National Park, this campsite offers the thrill of being close to nature and wildlife. Visitors can go on jeep safaris, bird watching tours, and guided treks in the forest. The campsite features eco-friendly tents with basic amenities and a bonfire area for evening gatherings. Ideal for wildlife enthusiasts and photographers, this site provides a unique experience amidst the natural beauty of one of India’s oldest national parks
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d69f4a21d9d1c8728acb">View Wildlife Adventure Camping, Jim Corbett National Park
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253917/Yelpcamp/uodyqdnjgyppvj1pzmjm.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    asmit_1502 @asmit12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Tea Garden Camping, Munnar
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Set in the rolling hills of Munnar, this campsite offers a stay amidst lush tea plantations. Visitors can explore the beauty of Munnar with tea estate walks, nature trails, and visits to nearby waterfalls. The campsite has cozy tents with stunning views of the mountains and offers traditional Kerala meals. A perfect retreat for nature lovers and those seeking peace, this serene campsite provides an unforgettable experience in the lap of nature.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d6ec4a21d9d1c8728ad4">View Tea Garden Camping, Munnar
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731253994/Yelpcamp/rrth8fypswdd5ekdhsuv.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    aryan_12 @aryan123@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Valley View Camping, Kasol
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Located in the Parvati Valley, Kasol&#39;s valley view campsite is a haven for backpackers and trekkers. The campsite offers a panoramic view of the mountains and rivers, and visitors can engage in activities like village hikes, river rafting, and stargazing. The tents are spacious and comfortable, with nearby cafés offering Israeli and Indian food. With its tranquil surroundings, this campsite is a great place to relax and unwind in nature.
+
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d7d84a21d9d1c8728af3">View Valley View Camping, Kasol
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731254230/Yelpcamp/w4grxivafabvn9sef7qt.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    aryan_12 @aryan123@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Eco Adventure Camp, Wayanad
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Situated in the dense forests of Wayanad, this eco-friendly campsite offers a true wilderness experience. The area is home to abundant wildlife, including elephants, deer, and exotic birds. Campers can enjoy guided treks, waterfall visits, and bamboo rafting. The site offers basic yet comfortable tents, ensuring a low environmental impact. This camping experience is perfect for those who want to immerse themselves in nature and adventure, while also supporting sustainable tourism.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d8004a21d9d1c8728afc">View Eco Adventure Camp, Wayanad
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731254270/Yelpcamp/dc7zuqzdpql7jxie4wgc.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    aryan_12 @aryan123@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Glamping by the Lake, Udaipur
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Located on the shores of Lake Pichola, this luxury camping experience offers the perfect blend of nature and comfort. The tents are lavishly furnished, featuring plush beds and private bathrooms. Visitors can enjoy lake views, boat rides, and explore Udaipur’s historic palaces and forts. The campsite also offers cultural performances and traditional Rajasthani meals. Ideal for couples and families seeking an upscale camping experience with a royal touch.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730d8354a21d9d1c8728b05">View Glamping by the Lake, Udaipur
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731254323/Yelpcamp/wpvz3eoljp8fe2w8xwif.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    gaurav12 @gaurav12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Mountain Base Camp, Triund
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Situated at the base of the Triund trek near McLeod Ganj, this campsite is a popular stopover for trekkers. The campsite offers breathtaking views of the Dhauladhar mountain range and the Kangra Valley. Visitors can enjoy bonfires, trekking, and peaceful nights under a canopy of stars. The tents are basic but comfortable, making this an excellent spot for those seeking adventure and solitude in the mountains.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730dbef4a21d9d1c8728b29">View Mountain Base Camp, Triund
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731255277/Yelpcamp/sihfq9ggqfk8rarce6ve.jpg" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    gaurav12 @gaurav12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Jungle Campsite, Tadoba National Park
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Located near the Tadoba Andhari Tiger Reserve, this campsite provides an exciting wildlife experience in Maharashtra’s oldest national park. Guests can embark on thrilling tiger safaris, nature walks, and photography tours. The campsite is equipped with spacious tents, local cuisine, and campfire arrangements. It’s ideal for nature lovers and adventure seekers looking to explore the dense jungles of central India.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730dc1e4a21d9d1c8728b32">View Jungle Campsite, Tadoba National Park
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731255324/Yelpcamp/x55du1ldpd1cfukn2n6n.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    gaurav12 @gaurav12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Riverside Camping, Tirthan Valley
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Set along the banks of the Tirthan River, this peaceful campsite offers a rejuvenating experience surrounded by lush forests and clear waters. Campers can enjoy fishing, trekking to nearby waterfalls, and evening bonfires. The tents are comfortable, and organic meals are provided. Ideal for those seeking tranquility and natural beauty, this campsite is a hidden gem in Himachal Pradesh.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730dc4f4a21d9d1c8728b3b">View Riverside Camping, Tirthan Valley
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731255374/Yelpcamp/butx78njh8t24kixc6ah.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    gaurav12 @gaurav12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Camping in the Great Rann of Kutch
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Experience the beauty of the vast white salt desert at this campsite in the Great Rann of Kutch. The campsite offers stunning views of the endless salt flats, cultural performances, and camel rides. Guests stay in traditional Kutchi-style tents equipped with modern amenities. With its unique landscape and cultural richness, this campsite is perfect for those looking for an extraordinary and memorable desert adventure.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730dc7b4a21d9d1c8728b44">View Camping in the Great Rann of Kutch
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731255417/Yelpcamp/o8jexnzjqzhmpymjofvf.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    gaurav12 @gaurav12@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    Himalayan Adventure Camp, Auli
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    Perched high in the Garhwal Himalayas, this campsite offers breathtaking views of snow-capped peaks and endless adventure opportunities. Visitors can go skiing, trekking, or ride the famous Auli ropeway. The campsite provides cozy tents with warm bedding and local Garhwali cuisine. Ideal for adventure enthusiasts and nature lovers, this campsite promises an exhilarating experience in the heart of the Himalayas.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6730dcac4a21d9d1c8728b4d">View Himalayan Adventure Camp, Auli
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731255466/Yelpcamp/whqa3xn0altvxpgsinyf.webp" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    Asmit1234 @asmitsri2182@gmail.com
+                                </p>
+                                <h5 class="card-title">
+                                    sanskar sadan
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    United college
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/6734fe41ee81ae124b871d24">View sanskar sadan
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/dmyngpsi3/image/upload/v1731526211/Yelpcamp/gxwqfxhfbtuapqrrdz4s.png" class="img-fluid rounded-end" alt="Blog Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-5 px-3 py-4" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                    testuser726 @test4@test.com
+                                </p>
+                                <h5 class="card-title">
+                                    Beautiful Lake
+                                </h5>
+                                <p class="card-text text-truncate">
+                                    A very beautiful lake with clear water.
+                                </p>
+                                <div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary ms-2" href="/campgrounds/69f2579dc11e8bc712d0e7b4">View Beautiful Lake
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            
+                                <img src="https://res.cloudinary.com/douqbebwk/image/upload/v1600103881/YelpCamp/lz8jjv2gyynjil7lswf4.png" class="img-fluid rounded-end" alt="Default Image" style="max-height: 100px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+
+
+        <div class="col-md-4">
+            <h5 class="mt-4 ms-3">Price from Low to high</h5>
+            <ul class="list-group list-group-flush">
+                
+                    <li class="list-group-item" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 32px; color: #ddd; margin-right: 10px;">
+                                1
+                            </span>
+                            <div>
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                     @
+                                            Sun Nov 10 2024 21:13:05 GMT+0530 (India Standard Time)
+                                </p>
+                                <p style="margin: 0;"><strong>
+                                        Tropical Paradise Camping, Coorg
+                                    </strong></p>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                    
+                    <li class="list-group-item" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 32px; color: #ddd; margin-right: 10px;">
+                                2
+                            </span>
+                            <div>
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                     @
+                                            Sun Nov 10 2024 21:13:57 GMT+0530 (India Standard Time)
+                                </p>
+                                <p style="margin: 0;"><strong>
+                                        Beachfront Camping at Palolem Beach
+                                    </strong></p>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                    
+                    <li class="list-group-item" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 32px; color: #ddd; margin-right: 10px;">
+                                3
+                            </span>
+                            <div>
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                     @
+                                            Sun Nov 10 2024 21:14:55 GMT+0530 (India Standard Time)
+                                </p>
+                                <p style="margin: 0;"><strong>
+                                        Forest Trails Camping, Rishikesh
+                                    </strong></p>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                    
+                    <li class="list-group-item" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 32px; color: #ddd; margin-right: 10px;">
+                                4
+                            </span>
+                            <div>
+                                <p class="text-muted" style="font-size: 14px;">
+                                    <i class="bi bi-person-fill"></i>
+                                     @
+                                            Sun Nov 10 2024 21:20:13 GMT+0530 (India Standard Time)
+                                </p>
+                                <p style="margin: 0;"><strong>
+                                        Desert Dunes Camping, Jaisalmer
+                                    </strong></p>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                    
+            </ul>
+        </div>
+    </div>
+    </div> 
+        </main>
+        <footer class="footer bg-dark py-3 mt-auto">
+    <div class="container">
+        <span class="text-muted">&copy; YelpCamp 2020</span>
+    </div>
+</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="/javascript/validateForm.js"></script>
+</body>
+
+</html>
