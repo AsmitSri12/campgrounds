@@ -9,7 +9,7 @@
                             <div class="card-body">
                                 <p class="text-muted" style="font-size: 14px;">
                                     <i class="bi bi-person-fill"></i>
-                                    <%= campground.author.username %> @<%= campground.author.email %>
+                                    <%= campground.author ? campground.author.username : 'Unknown' %> @<%= campground.author ? campground.author.email : '' %>
                                 </p>
                                 <h5 class="card-title">
                                     <%= campground.title %>
@@ -46,11 +46,11 @@
                                 <%= index + 1 %>
                             </span>
                             <div>
-                                <p class="text-muted" style="font-size: 14px;">
-                                    <i class="bi bi-person-fill"></i>
-                                    <%= camp.author.username %> @<%= camp.author.email %>
-                                            <%= camp.createdAt %>
-                                </p>
+<p class="text-muted" style="font-size: 14px;">
+                                <i class="bi bi-person-fill"></i>
+                                <%= camp.author ? camp.author.username : 'Unknown' %> @<%= camp.author ? camp.author.email : '' %>
+                                <%= camp.createdAt ? camp.createdAt.toDateString() : '' %>
+                            </p>
                                 <p style="margin: 0;"><strong>
                                         <%= camp.title %>
                                     </strong></p>
