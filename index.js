@@ -1,10 +1,10 @@
-if(process.env.NODE_ENV != 'production'){
-    require('dotenv').config();
-}
+require('dotenv').config();
 
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+
 const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
 const session = require('express-session');
@@ -20,8 +20,11 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/review');
 
 
-const dbUrl = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : 'mongodb://127.0.0.1:27017/Campground-data';
-mongoose.connect(dbUrl)
+const dbUrl = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/Campground-data';
+mongoose.connect(dbUrl, {
+    serverSelectionTimeoutMS: 30000,
+    appName: 'campgrounds-app',
+})
     .then(() => {
         console.log("Connected to Database");
     })
