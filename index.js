@@ -81,6 +81,12 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/debug', async (req, res) => {
+    const Campground = require('./models/campgrounds');
+    const camps = await Campground.find({}).limit(2);
+    res.json({ count: camps.length, data: camps });
+});
+
 //User Router
 app.use('/', userRoutes);
 
