@@ -78,10 +78,6 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/discover', (req, res) => {
-    res.render('discover');
-});
-
 //User Router
 app.use('/', userRoutes);
 
