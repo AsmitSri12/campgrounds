@@ -1,0 +1,9 @@
+Steps to launch the hicamps website on chrome:-
+Open VS Code and open the folder of Campgrounds 
+
+click the index.js file and go the terminal( given below )
+
+write >node index.js and press Enter 
+
+Now Open Chrome and Enter http://localhost:3000/campgrounds 
+

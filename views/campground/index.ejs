@@ -9,7 +9,11 @@
                             <div class="card-body">
                                 <p class="text-muted" style="font-size: 14px;">
                                     <i class="bi bi-person-fill"></i>
-                                    <%= campground.author.username %> @<%= campground.author.email %>
+                                    <% if (campground.author) { %>
+                                        <%= campground.author.username %> @<%= campground.author.email %>
+                                    <% } else { %>
+                                        Unknown Author
+                                    <% } %>
                                 </p>
                                 <h5 class="card-title">
                                     <%= campground.title %>
@@ -45,8 +49,12 @@
                             <div>
                                 <p class="text-muted" style="font-size: 14px;">
                                     <i class="bi bi-person-fill"></i>
-                                    <%= camp.author.username %> @<%= camp.author.email %>
-                                            <%= camp.createdAt %>
+                                    <% if (camp.author) { %>
+                                        <%= camp.author.username %> @<%= camp.author.email %>
+                                    <% } else { %>
+                                        Unknown Author
+                                    <% } %>
+                                    <%= camp.createdAt %>
                                 </p>
                                 <p style="margin: 0;"><strong>
                                         <%= camp.title %>
