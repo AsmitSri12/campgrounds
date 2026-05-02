@@ -20,7 +20,7 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/review');
 
 
-const dbUrl = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/Campground-data';
+const dbUrl = process.env.MONGODB_URI;
 mongoose.connect(dbUrl, {
     serverSelectionTimeoutMS: 30000,
     appName: 'campgrounds-app',
