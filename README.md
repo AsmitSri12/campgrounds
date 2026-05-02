@@ -5,7 +5,7 @@
 HiCamp is a full-stack web application that allows users to view, create, edit, and review campgrounds. Users can browse a comprehensive list of campsites, read detailed reviews, and contribute their own experiences. The application features user authentication, ensuring that only registered users can add new campgrounds or write reviews, while the author of a campground or review retains full control over editing and deleting their content.
 
 ## 🚀 Live Demo
-**[View the Live Application](https://campgrounds-ihao.onrender.com)**
+**[https://campgrounds-ri7u.onrender.com](https://campgrounds-ri7u.onrender.com)**
 
 ## ✨ Features
 *   **User Authentication & Authorization:** Secure sign-up, login, and logout functionalities using Passport.js. Users can only edit or delete campgrounds and reviews they created.
