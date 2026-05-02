@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports.index = async (req, res, next) => {
     const campgrounds = await Campground.find({}).populate('author');
-    const lowPriceCamp = await Campground.find({ price: { $gte: 2000 } }).limit(4).populate('author');
+    const lowPriceCamp = await Campground.find({}).populate('author').sort({price: 1}).limit(4);
     res.render('campground/index', { campgrounds, lowPriceCamp });
 }
 
