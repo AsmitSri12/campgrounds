@@ -8,7 +8,36 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="campgroundDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Campgrounds
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right p-0" style="width: 350px; max-height: 400px; overflow-y: auto;" aria-labelledby="campgroundDropdown">
+                        <% if(navCampgrounds && navCampgrounds.length > 0) { %>
+                            <% navCampgrounds.forEach(camp => { %>
+                                <a href="/campgrounds/<%= camp._id %>" class="dropdown-item border-bottom py-2">
+                                    <div class="d-flex">
+                                        <% if(camp.images && camp.images.length > 0) { %>
+                                            <img src="<%= camp.images[0].url %>" alt="<%= camp.title %>" style="width: 60px; height: 60px; object-fit: cover;" class="rounded mr-2">
+                                        <% } else { %>
+                                            <div class="bg-secondary rounded mr-2" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                                <span class="text-white">No Image</span>
+                                            </div>
+                                        <% } %>
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <h6 class="mb-0 text-truncate"><%= camp.title %></h6>
+                                            <small class="text-muted"><%= camp.location %></small>
+                                            <div class="text-success font-weight-bold">$<%= camp.price %>/night</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            <% }) %>
+                        <% } else { %>
+                            <div class="dropdown-item">No campgrounds available</div>
+                        <% } %>
+                        <a class="dropdown-item text-center text-primary" href="/campgrounds">View All Campgrounds</a>
+                    </div>
+                </div>
                 <a class="nav-link" href="/campgrounds/new">New Campground</a>
             </div>
             <div class="navbar-nav ms-auto">

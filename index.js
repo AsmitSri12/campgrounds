@@ -14,6 +14,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const localStrategy = require('passport-local');
 const User = require('./models/user');
+const Campground = require('./models/campgrounds');
 const ExpressError = require('./utilities/expressError');
 
 
@@ -69,10 +70,11 @@ passport.serializeUser(User.serializeUser());
 
 passport.deserializeUser(User.deserializeUser());
 
-app.use((req, res, next) => {
+app.use(async (req, res, next) => {
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
+    res.locals.navCampgrounds = await Campground.find({}).limit(6);
     next();
 })
 
@@ -82,7 +84,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/debug', async (req, res) => {
-    const Campground = require('./models/campgrounds');
     const camps = await Campground.find({}).limit(2);
     res.json({ count: camps.length, data: camps });
 });
