@@ -74,7 +74,15 @@ app.use(async (req, res, next) => {
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
-    res.locals.navCampgrounds = await Campground.find({}).limit(6);
+    try {
+        if (mongoose.connection.readyState === 1) {
+            res.locals.navCampgrounds = await Campground.find({}).limit(6);
+        } else {
+            res.locals.navCampgrounds = [];
+        }
+    } catch (e) {
+        res.locals.navCampgrounds = [];
+    }
     next();
 })
 
