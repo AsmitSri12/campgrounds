@@ -23,14 +23,7 @@ const reviewRoutes = require('./routes/review');
 
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/Campground-data';
 
-mongoose.connect(dbUrl)
-    .then(() => {
-        console.log("Connected to Database");
-    })
-    .catch(err => {
-        console.log("Connection Failed");
-        console.log(err)
-    })
+console.log('DB_URL:', dbUrl);
 
 const app = express();
 
@@ -116,8 +109,26 @@ app.use((err, req, res, next) => {
 })
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-})
+
+const startServer = async () => {
+    try {
+        await mongoose.connect(dbUrl, {
+            serverSelectionTimeoutMS: 5000,
+            socketTimeoutMS: 45000,
+        });
+        console.log("Connected to Database");
+        
+        app.listen(port, () => {
+            console.log(`Listening on port ${port}`);
+        });
+    } catch (err) {
+        console.log("Failed to connect to database:", err.message);
+        app.listen(port, () => {
+            console.log(`Listening on port ${port} (DB not connected)`);
+        });
+    }
+};
+
+startServer();
 
 
